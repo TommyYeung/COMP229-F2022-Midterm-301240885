@@ -1,3 +1,8 @@
+//File name: route/books.js
+//Student’s Name: Pok Hei Yeung
+//StudentID: 301240885
+
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -72,7 +77,7 @@ book.create(newBook, (err, book) =>{
 
 
 // GET the Book Details page in order to edit an existing Book
-router.get('/:id', (req, res, next) => {
+router.get('/details/:id', (req, res, next) => {
 
   let id = req.params.id;
 
@@ -85,14 +90,14 @@ router.get('/:id', (req, res, next) => {
       else
       {
           
-          res.render('/:id', {title: 'Edit Books'})
+          res.render('/details/:id', {title: 'Edit Books'})
         
       }
   });
 });
-/*
+
 // POST - process the information passed from the details form and update the document
-router.post('/:id', (req, res, next) => {
+router.post('/details/:id', (req, res, next) => {
   let id = req.params.id
 
   let update = book({
@@ -120,20 +125,6 @@ router.post('/:id', (req, res, next) => {
 
 
 });
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
 
 
 
