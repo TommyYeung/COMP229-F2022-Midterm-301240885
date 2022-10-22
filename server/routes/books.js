@@ -79,9 +79,9 @@ book.create(newBook, (err, book) =>{
 // GET the Book Details page in order to edit an existing Book
 router.get('/:id', (req, res, next) => {
 
-  let id = req.params.id;
+  let bookid = req.params.id;
 
-  book.findById(id, (err) => {
+  book.findById(bookid, (err) => {
       if(err)
       {
           console.log(err);
